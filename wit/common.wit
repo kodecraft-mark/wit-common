@@ -1,0 +1,62 @@
+package jabratech:common@0.0.1;
+
+// NOTE: As these types grow, we need to split it into multiple files
+interface types {
+
+    variant venue-type {
+        otc(string),
+        cefi-exchange(string),
+        defi-exchange(string),
+    }
+
+    enum trading-mechanism {
+        rfq,
+        rfs,
+        clob
+    }
+
+    record currency {
+        ticker: string,
+        name: option<string>,
+        is-active: option<bool>,
+        decimals: option<s8>,
+        display-scale: option<s8>,
+    }
+
+    record pair {
+        name: string,
+        base: option<currency>,
+        quote: option<currency>,
+        is-active: option<bool>,
+    }
+
+    enum liquidity-type {
+        maker,
+        taker
+    }
+
+    enum direction {
+        buy,
+        sell,
+        zero
+    }
+
+    enum instrument-kind {
+        spot,
+        future,
+        perpetual,
+        option
+    }
+
+    enum option-kind {
+        call,
+        put
+    }
+
+    enum order-state {
+        open,
+        closed,
+        cancelled
+    }
+
+}
