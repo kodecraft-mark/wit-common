@@ -1,4 +1,4 @@
-package jabratech:common@0.1.0;
+package jabratech:common@0.1.1;
 
 // NOTE: As these types grow, we need to split them into multiple files
 interface types {
@@ -6,13 +6,13 @@ interface types {
     /**
      * Represents different types of trading venues.
      * - otc: Over-the-counter trading venue, identified by a string.
-     * - cefi-exchange: Centralized exchange, identified by a string.
-     * - defi-exchange: Decentralized exchange, identified by a string.
+     * - c-exchange: Centralized exchange, identified by a string.
+     * - d-exchange: Decentralized exchange, identified by a string.
      */
     variant venue-type {
         otc(string),
-        cefi-exchange(string),
-        defi-exchange(string),
+        c-exchange(string),
+        d-exchange(string),
     }
 
     /**
@@ -98,25 +98,25 @@ interface types {
     /**
      * Enum representing different kinds of financial instruments.
      * - spot: Spot market instrument.
-     * - future: Futures contract.
-     * - perpetual: Perpetual futures contract.
-     * - option: Options contract.
+     * - fut: Futures contract.
+     * - perp: Perpetual futures contract.
+     * - opt: Options contract.
      */
     enum instrument-kind {
         spot,
-        future,
-        perpetual,
-        option
+        fut,
+        perp,
+        opt
     }
 
     /**
      * Enum representing the type of an options contract.
-     * - call: Call option.
-     * - put: Put option.
+     * - c: Call option.
+     * - p: Put option.
      */
     enum option-kind {
-        call,
-        put
+        c,
+        p
     }
 
     /**
