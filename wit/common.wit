@@ -30,6 +30,15 @@ interface types {
         is-active: option<bool>,
     }
 
+    record greeks {
+        delta: option<f64>,
+        gamma: option<f64>,
+        theta: option<f64>,
+        vega: option<f64>,
+        rho: option<f64>,
+    }
+
+
     enum liquidity-type {
         maker,
         taker
@@ -58,5 +67,7 @@ interface types {
         closed,
         cancelled
     }
+
+
 
 }
