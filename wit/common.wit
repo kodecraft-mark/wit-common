@@ -52,6 +52,7 @@ interface types {
      * - is-active: Optional flag indicating whether the trading pair is active.
      */
     record pair {
+        id: s8,
         name: string,
         base: option<currency>,
         quote: option<currency>,
