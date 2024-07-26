@@ -167,4 +167,28 @@ interface types {
         is-exchange: bool,
         default-expiry: string
     }
+    /**
+     * Record representing a user
+     * - id: user uuid
+     * - first-name: user's first name
+     * - ticker: user's last name
+     * - email: user's email, use for logging in
+     * - role: user's role
+     */
+    record user {
+        id: string,
+        first-name: string,
+        last-name: string,
+        email: string,
+        role: user-role
+    }
+    /**
+     * Record representing a user's role
+     * - id: user's role uuid
+     * - name: description of a role
+     */
+    record user-role {
+        id: string,
+        name: string
+    }
 }
