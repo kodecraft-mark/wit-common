@@ -132,4 +132,39 @@ interface types {
         closed,
         cancelled
     }
+    /**
+     * Enum representing the payout currency
+     * - base: pay in base currency such as BTC, ETH, SOL, etc
+     * - quote: pay in quote currency such as USD, USDC etc
+     */
+    enum payout-ccy {
+        base,
+        quote
+    }
+    /**
+     * Enum representing otion type
+     * - american: american type of option
+     * - european: europian type of option
+     */
+    enum option-type {
+        american,
+        european
+    }
+    /**
+     * Record representing a counterparty
+     * - id: counterparty identifier
+     * - name: name of the counter party in full
+     * - ticker: a ticker identifier like an alias
+     * - short-name: a shorten version of counterparty name
+     * - is-exchange: represents if the counterparty is an exchange
+     * - default-expiry: a time where the trade will automatically expired such as `10:00:00`
+     */
+    record counterparty {
+        id: s8,
+        name: string,
+        ticker: string,
+        short-name: option<string>,
+        is-exchange: bool,
+        default-expiry: string
+    }
 }
