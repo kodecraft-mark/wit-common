@@ -191,4 +191,14 @@ interface types {
         id: string,
         name: string
     }
+
+    /**
+     * Response error
+     * - code: error code
+     * - message: error message 
+     */
+    record response-error {
+        code: s16,
+        message: string
+    }
 }
