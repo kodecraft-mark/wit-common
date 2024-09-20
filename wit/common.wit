@@ -73,6 +73,8 @@ interface types {
         theta: option<f64>,
         vega: option<f64>,
         rho: option<f64>,
+	vomma: option<f64>,
+	vanna: option<f64>
     }
 
     /**
